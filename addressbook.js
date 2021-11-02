@@ -99,3 +99,9 @@ contactarray.push(new addressbook("Mayura","Kolhe","sarasvatinagar","jalgoan","m
 console.log(contactarray);
 let length = contactarray.length;
 contactarray.forEach((contact) => console.log(contact.toString()));
+console.log("\n searching a specific data use name and update the addressbook");
+let index = contactarray.findIndex(contact => contact.firstname == "Mayura");
+console.log("index found"+index);
+contactarray[index].zip = 12345678;
+console.log("contact after update the data");
+contactarray.forEach((contact) => console.log(contact.tostring()));
